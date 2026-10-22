@@ -30,6 +30,13 @@ app.get('/api/log', (req, res) => {
   });
 });
 
+app.get('/health-probe', (req, res) => {
+  res.status(200).json({
+    ok: true,
+    message: 'ok'
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
